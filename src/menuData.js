@@ -1,3 +1,14 @@
+import appetizerImg from './assests/appetizer-pic-asset.jpg';
+import aperitivoCebollaImg from './assests/aperitivoCebolla-pic-asset.jpg';
+import aperitivosQuesitosEspinacaImg from './assests/aperitivoQueso-pic-asset.jpg';
+import drinkImg from './assests/drink-pic-asset.jpg';
+import miloImg from './assests/milo-pic-asset.jpg';
+import colaImg from './assests/cola-pic-asset.jpg';
+import pastaImg from './assests/pasta-pic-asset.jpg';
+import carneImg from './assests/carne-pic-asset.jpg';
+import shrimpImg from './assests/shrimp-pic-asset.jpg';
+import postreImg from './assests/postre-pic-asset.jpg';
+
 const aperitivosData = [
     {
         name: 'Aperitivos de Queso',
