@@ -26,7 +26,8 @@ export function loadmenu() {
     const bebidasSection = createBebidas();
     parentDiv.appendChild(bebidasSection);
 
-    // const postreSection = createPostre();
+    const postreSection = createPostre();
+    parentDiv.appendChild(postreSection);
 }
 
 function createAperitivos() {
@@ -216,9 +217,51 @@ function createBebidas() {
     return menuCategoryDiv;
 }
 
-function createPostre(postreHeader, postre) {
-    // Postre creation and handling
-    postreHeader.textContent = 'Postre';
-    postre.src = postreImg;
-    postre.alt = 'Foto de postre que es un baso grande de helado de chocolate con leche como un batido y troncos grandes y chiquitos de chocolate';
+function createPostre() {
+
+
+    const menuCategoryDiv = document.createElement('div');
+    const itemsGrid = document.createElement('div');
+    const catergoryHeader = document.createElement('h2');
+    let menuItems = [
+        {
+            name: 'Sueño Supremo de Chocolate',
+            description: 'Rico y aterciopelado chocolate mezclado a la perfección, desbordante de un decadente sirope de chocolate, una montaña de crema batida fresca y el toque crujiente de una galleta de chocolate. Espolvoreado con cacao en polvo de primera calidad.',
+            price: ' $15',
+            src: postreImg,
+            alt: 'Un indulgente batido de chocolate en una taza de frasco masón, cubierto con crema batida, una barra de galleta de chocolate y sirope de chocolate que gotea, frente a un fondo negro con cacao en polvo cayendo.'
+        }
+    ];
+
+    menuItems.forEach((item) => {
+        const menuCard = document.createElement('div');
+        const itemImg = document.createElement('img');
+        const itemTitle = document.createElement('h3');
+        const itemDescription = document.createElement('p');
+        const itemPrice = document.createElement('span');
+
+        // Create and set image 
+        itemImg.src = item.src;
+        itemImg.alt = item.alt;
+        itemImg.loading = 'lazy';
+        menuCard.appendChild(itemImg);
+
+        itemTitle.textContent = item.name;
+        menuCard.appendChild(itemTitle);
+
+        itemDescription.textContent = item.description;
+        itemPrice.textContent = item.price;
+        itemPrice.className = 'price';
+        itemDescription.appendChild(itemPrice);
+        menuCard.appendChild(itemDescription);
+        
+        itemsGrid.appendChild(menuCard);
+    });    
+   
+    catergoryHeader.textContent = 'Postre';
+
+    menuCategoryDiv.appendChild(catergoryHeader);
+    menuCategoryDiv.appendChild(itemsGrid);
+
+    return menuCategoryDiv;
 }
