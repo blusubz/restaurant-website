@@ -23,8 +23,8 @@ export function loadmenu() {
     const platosSection = createPlatos();
     parentDiv.appendChild(platosSection);
 
-    // const bebidasSection = createBebidas();
-
+    const bebidasSection = createBebidas();
+    parentDiv.appendChild(bebidasSection);
 
     // const postreSection = createPostre();
 }
@@ -74,7 +74,6 @@ function createAperitivos() {
         itemImg.loading = 'lazy';
         menuCard.appendChild(itemImg);
 
-        
         itemTitle.textContent = item.name;
         menuCard.appendChild(itemTitle);
 
@@ -102,7 +101,7 @@ function createPlatos() {
     let menuItems = [
         {
             name: 'Pasta',
-            description: 'Un plato caliento de pastas con queso',
+            description: 'Un plato caliento de pastas con queso y carne y cilantro',
             price: ' $22',
             src: pastaImg,
             alt: 'Foto de un plato de pastas'
@@ -136,7 +135,6 @@ function createPlatos() {
         itemImg.loading = 'lazy';
         menuCard.appendChild(itemImg);
 
-        
         itemTitle.textContent = item.name;
         menuCard.appendChild(itemTitle);
 
@@ -157,21 +155,65 @@ function createPlatos() {
     return menuCategoryDiv;
 }
 
-function createBebidas(bebidasHeader, drink, milo, cola) {
-    // Drinks creation and handling 
-    bebidasHeader.textContent = 'Bebidas';
+function createBebidas() {
+    const menuCategoryDiv = document.createElement('div');
+    const itemsGrid = document.createElement('div');
+    const catergoryHeader = document.createElement('h2');
+    let menuItems = [
+        {
+            name: 'Martini',
+            description: 'Ginebra The Botanist o Vodka Grey Goose, Vermut Seco Dolin, piel de limón exprimida o aceituna Castelvetrano',
+            price: ' $17',
+            src: drinkImg,
+            alt: 'Foto de un martini'
+        },
+        {
+            name: 'Milo',
+            description: 'Leche de chocolate milo, frio o caliente',
+            price: ' $14',
+            src: miloImg,
+            alt: 'Foto de un baso de leche de chocolate frio'
+        },
+        {
+            name: 'Coka-Cola',
+            description: 'Coka cola',
+            price: ' $11',
+            src: colaImg,
+            alt: 'Foto de coka cola en vidrio y al lado un baso lleno de coka cola y hielo'
+        }
+    ];
 
-    drink.src = drinkImg;
-    drink.alt = 'Picture of bebrage';
-    drink.loading = 'lazy';
+    menuItems.forEach((item) => {
+        const menuCard = document.createElement('div');
+        const itemImg = document.createElement('img');
+        const itemTitle = document.createElement('h3');
+        const itemDescription = document.createElement('p');
+        const itemPrice = document.createElement('span');
 
-    milo.src = miloImg;
-    milo.alt = 'Foto de leche de chocolate de milo frio';
-    milo.loading = 'lazy';
+        // Create and set image 
+        itemImg.src = item.src;
+        itemImg.alt = item.alt;
+        itemImg.loading = 'lazy';
+        menuCard.appendChild(itemImg);
 
-    cola.src = colaImg;
-    cola.alt = 'Foto de coka cola frio';
-    cola.loading = 'lazy';
+        itemTitle.textContent = item.name;
+        menuCard.appendChild(itemTitle);
+
+        itemDescription.textContent = item.description;
+        itemPrice.textContent = item.price;
+        itemPrice.className = 'price';
+        itemDescription.appendChild(itemPrice);
+        menuCard.appendChild(itemDescription);
+        
+        itemsGrid.appendChild(menuCard);
+    });    
+   
+    catergoryHeader.textContent = 'Bebidas';
+
+    menuCategoryDiv.appendChild(catergoryHeader);
+    menuCategoryDiv.appendChild(itemsGrid);
+
+    return menuCategoryDiv;
 }
 
 function createPostre(postreHeader, postre) {
