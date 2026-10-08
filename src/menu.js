@@ -12,33 +12,21 @@ import postreImg from './assests/postre-pic-asset.jpg'
 export function loadmenu() {
     // Create elements in memory
     const parentDiv = document.getElementById('content');
-
     const menuPageHeader = document.createElement('h1');
-    const bebidasHeader = document.createElement('h2');
-    const platosHeader = document.createElement('h2');
-    const postreHeader = document.createElement('h2');
-    
-
-
-    const drink = document.createElement('img');
-    const milo = document.createElement('img');
-    const cola = document.createElement('img');
-
-    const postre = document.createElement('img');
-
-    const pasta = document.createElement('img');
-    const carne = document.createElement('img');
-    const shrimp = document.createElement('img');
 
     menuPageHeader.textContent = "Menu"; // TODO: Change font
     parentDiv.appendChild(menuPageHeader);
 
     const aperitivosSection = createAperitivos(); 
-    
     parentDiv.appendChild(aperitivosSection);
-    // createPlatos(platosHeader, pasta, carne, shrimp);
-    // createBebidas(bebidasHeader, drink, milo, cola);
-    // createPostre(postreHeader, postre);
+
+    const platosSection = createPlatos();
+    parentDiv.appendChild(platosSection);
+
+    // const bebidasSection = createBebidas();
+
+
+    // const postreSection = createPostre();
 }
 
 function createAperitivos() {
@@ -49,33 +37,29 @@ function createAperitivos() {
         {
             name: 'Aperitivos de Queso',
             description: 'Aperitivos relleno de queso',
-            price: '$9',
+            price: ' $9',
             src: appetizerImg,
             alt: 'Foto de aperitivos de quesitos relleno de queso'
         },
         {
             name: 'Aros de Cebolla',
             description: 'Aros de cebolla apanados fritos',
-            price: '$9',
+            price: ' $9',
             src: aperitivoCebollaImg,
             alt: 'Foto de aperitivos de cebolla'
         },
         {
             name: 'Aperitivos de Queso y Espinaca',
-            description: 'Aperitivos de quesitos relleno de espinaca',
-            price: '$9',
+            description: 'Aperitivos de quesitos relleno de espinaca y queso',
+            price: ' $9',
             src: aperitivosQuesitosEspinacaImg,
             alt: 'Foto de aperitivo de quesitos relleno de espinaca'
         }
     ];
 
-    // Add class to div
+    // Add classes to divs
     menuCategoryDiv.className = 'menu-category'; 
     itemsGrid.className = 'items-grid'; 
-
-    // Aperitivos creation and handling
-    catergoryHeader.textContent = 'Aperitivos';
-    menuCategoryDiv.appendChild(catergoryHeader);
 
     menuItems.forEach((item) => {
         const menuCard = document.createElement('div');
@@ -96,32 +80,81 @@ function createAperitivos() {
 
         itemDescription.textContent = item.description;
         itemPrice.textContent = item.price;
+        itemPrice.className = 'price';
         itemDescription.appendChild(itemPrice);
         menuCard.appendChild(itemDescription);
         
         itemsGrid.appendChild(menuCard);
     });
 
+    catergoryHeader.textContent = 'Aperitivos';
+
+    menuCategoryDiv.appendChild(catergoryHeader);
     menuCategoryDiv.appendChild(itemsGrid);
 
     return menuCategoryDiv;
 }
 
-function createPlatos(platosHeader, pasta, carne, shrimp) {
-    // Platos creation and handling - Use flexbox on this parent container and add in all 3 images and in each create a seperate container to hold the image and any info on the image
-    platosHeader.textContent = 'Platos';
+function createPlatos() {
+    const menuCategoryDiv = document.createElement('div');
+    const itemsGrid = document.createElement('div');
+    const catergoryHeader = document.createElement('h2');
+    let menuItems = [
+        {
+            name: 'Pasta',
+            description: 'Un plato caliento de pastas con queso',
+            price: ' $22',
+            src: pastaImg,
+            alt: 'Foto de un plato de pastas'
+        },
+        {
+            name: 'Carne Molida',
+            description: 'Un plato caliento de Carne Molida con arroz, un huevo frito encima, y platanos maduros',
+            price: ' $25',
+            src: carneImg,
+            alt: 'Foto de un plato de carne molida con arroz, un huevo frito encima, y platanos maduros'
+        },
+        {
+            name: 'Camarones',
+            description: 'Cazuela de camarones con limon y ajo',
+            price: ' $20',
+            src: shrimpImg,
+            alt: 'Foto de un plato de camarones con salsa'
+        }
+    ];
 
-    pasta.src = pastaImg;
-    pasta.alt = 'Picture of pasta';
-    pasta.loading = 'lazy';
+    menuItems.forEach((item) => {
+        const menuCard = document.createElement('div');
+        const itemImg = document.createElement('img');
+        const itemTitle = document.createElement('h3');
+        const itemDescription = document.createElement('p');
+        const itemPrice = document.createElement('span');
 
-    carne.src = carneImg;
-    carne.alt = 'Picture of carne molida con arroz, plantano maduro y huevo frito encima de arroz';
-    carne.loading = 'lazy';
+        // Create and set image 
+        itemImg.src = item.src;
+        itemImg.alt = item.alt;
+        itemImg.loading = 'lazy';
+        menuCard.appendChild(itemImg);
 
-    shrimp.src = shrimpImg;
-    shrimp.alt = 'Picture of plate of shrimp';
-    shrimp.loading = 'lazy';
+        
+        itemTitle.textContent = item.name;
+        menuCard.appendChild(itemTitle);
+
+        itemDescription.textContent = item.description;
+        itemPrice.textContent = item.price;
+        itemPrice.className = 'price';
+        itemDescription.appendChild(itemPrice);
+        menuCard.appendChild(itemDescription);
+        
+        itemsGrid.appendChild(menuCard);
+    });    
+   
+    catergoryHeader.textContent = 'Platos';
+
+    menuCategoryDiv.appendChild(catergoryHeader);
+    menuCategoryDiv.appendChild(itemsGrid);
+
+    return menuCategoryDiv;
 }
 
 function createBebidas(bebidasHeader, drink, milo, cola) {
