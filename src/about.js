@@ -4,7 +4,7 @@ export function loadabout() {
     const aboutParagraph = document.createElement('p');
 
     aboutGreeting.textContent = "About Marinas Restaurant";
-    aboutParagraph.textContent = "Founded since I was a child, I have always loved my mother special carne molida. Always made with love and served with care. There's something magical about a warm plate of carne molida mixed with mothers rice.";
+    aboutParagraph.textContent = "Fundada desde que era niño, siempre he amado la especial carne molida de mi madre. Hecha siempre con amor y servida con cuidado. Hay algo mágico en un plato caliente de carne molida mezclado con el arroz de mi madre.";
 
     parentDiv.appendChild(aboutGreeting);
     parentDiv.appendChild(aboutParagraph);

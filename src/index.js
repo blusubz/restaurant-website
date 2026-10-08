@@ -1,10 +1,7 @@
 import { loadhome } from './home.js';
 import { loadabout } from './about.js';
-// import {  }
-
-// Load home page
-// loadhome();
-// loadabout();
+import { loadmenu } from './menu.js';
+import { loadcontact } from './contact.js';
 
 // Logic for selecting tab
 const parentDiv = document.getElementById('content');
@@ -22,3 +19,16 @@ aboutBtn.addEventListener('click', () => {
     parentDiv.textContent = "";
     loadabout();
 });
+
+menuBtn.addEventListener('click', () => {
+    parentDiv.textContent = "";
+    loadmenu();
+});
+
+contactBtn.addEventListener('click', () => {
+    parentDiv.textContent = "";
+    loadcontact();
+})
+
+// Driver page is Home page - Load at page start 
+loadhome();
