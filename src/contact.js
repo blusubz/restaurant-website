@@ -16,7 +16,7 @@ export function loadcontact() {
 
     contactCardHeader.textContent = 'La guardiana del fuego';
     chefName.textContent = 'Luz Marinita';
-    chefNumber.textContent = '(444)-444-4444';
+    chefNumber.textContent = '(444)444-4444';
     chefEmail.textContent = 'elpatitolindo@patito.com';
 
     contactDiv.appendChild(contactCardHeader);
@@ -25,8 +25,6 @@ export function loadcontact() {
     contactDiv.appendChild(chefEmail);
 
     parentDiv.appendChild(contactDiv);
-
-
 
     // Form goes here 
     const formDiv = document.createElement('div');
