@@ -2,7 +2,6 @@ import reservationImg from './assets/reservar-pic-asset.jpg';
 
 export function loadcontact() {
     const parentDiv = document.getElementById('content');
-    const reservar = document.createElement('img');
     const contactarHeader = document.createElement('h1');
 
     contactarHeader.textContent = 'Contactar';
@@ -20,6 +19,11 @@ export function loadcontact() {
     form.action = 'https://httpbin.org/post';
     form.method = 'post';
     form.id = 'reservation-form';
+
+    const reservar = document.createElement('img');
+    reservar.src = reservationImg;
+    reservar.alt = 'Foto de mesa de reservación';
+    reservar.loading = 'lazy';
 
     const formHeader = document.createElement('h2');
     formHeader.textContent = 'Reservar:';
@@ -50,6 +54,7 @@ export function loadcontact() {
     submitBtn.type = 'submit';
     submitBtn.textContent = 'Enviar';
 
+    form.appendChild(reservar);
     form.appendChild(formHeader);
     form.appendChild(nameInput);
     form.appendChild(emailInput);
