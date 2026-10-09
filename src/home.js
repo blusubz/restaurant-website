@@ -1,5 +1,5 @@
 // Export using a named export so when importing we stay strict with the function name 'loadhome'
-import carneMolidaImg from './assests/carne-molida.png';
+import carneMolidaImg from './assets/carne-molida.png';
 
 export function loadhome() {
     // Create elements in memory

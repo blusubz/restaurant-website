@@ -1,13 +1,13 @@
-import appetizerImg from './assests/appetizer-pic-asset.jpg';
-import aperitivoCebollaImg from './assests/aperitivoCebolla-pic-asset.jpg';
-import aperitivosQuesitosEspinacaImg from './assests/aperitivoQueso-pic-asset.jpg';
-import drinkImg from './assests/drink-pic-asset.jpg';
-import miloImg from './assests/milo-pic-asset.jpg';
-import colaImg from './assests/cola-pic-asset.jpg';
-import pastaImg from './assests/pasta-pic-asset.jpg';
-import carneImg from './assests/carne-pic-asset.jpg';
-import shrimpImg from './assests/shrimp-pic-asset.jpg';
-import postreImg from './assests/postre-pic-asset.jpg';
+import appetizerImg from './assets/appetizer-pic-asset.jpg';
+import aperitivoCebollaImg from './assets/aperitivoCebolla-pic-asset.jpg';
+import aperitivosQuesitosEspinacaImg from './assets/aperitivoQueso-pic-asset.jpg';
+import drinkImg from './assets/drink-pic-asset.jpg';
+import miloImg from './assets/milo-pic-asset.jpg';
+import colaImg from './assets/cola-pic-asset.jpg';
+import pastaImg from './assets/pasta-pic-asset.jpg';
+import carneImg from './assets/carne-pic-asset.jpg';
+import shrimpImg from './assets/shrimp-pic-asset.jpg';
+import postreImg from './assets/postre-pic-asset.jpg';
 
 const aperitivosData = [
     {
