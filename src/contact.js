@@ -8,6 +8,23 @@ export function loadcontact() {
     parentDiv.appendChild(contactarHeader);
 
     // Contact card goes here
+    const contactDiv = document.createElement('div');
+    const contactCardHeader = document.createElement('h3');
+    const chefName = document.createElement('p');
+    const chefNumber = document.createElement('p');
+    const chefEmail = document.createElement('p');
+
+    contactCardHeader.textContent = 'La guardiana del fuego';
+    chefName.textContent = 'Luz Marinita';
+    chefNumber.textContent = '(444)-444-4444';
+    chefEmail.textContent = 'elpatitolindo@patito.com';
+
+    contactDiv.appendChild(contactCardHeader);
+    contactDiv.appendChild(chefName);
+    contactDiv.appendChild(chefNumber);
+    contactDiv.appendChild(chefEmail);
+
+    parentDiv.appendChild(contactDiv);
 
 
 
