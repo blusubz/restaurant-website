@@ -69,6 +69,7 @@ export function loadcontact() {
 
     const submitBtn = document.createElement('button');
     submitBtn.type = 'submit';
+    submitBtn.id = 'submit-btn';
     submitBtn.textContent = 'Enviar';
 
     form.appendChild(reservar);
