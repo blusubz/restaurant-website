@@ -14,10 +14,11 @@ export function loadmenu() {
     parentDiv.appendChild(createCategorySection('Postre', postreData));
 }
 
-function createCategorySection(catergoryTitle, itemsArray) {
+function createCategorySection(categoryTitle, itemsArray) {
     const menuCategoryDiv = document.createElement('div');
     const itemsGrid = document.createElement('div');
-    const catergoryHeader = document.createElement('h2');
+    const categoryHeader = document.createElement('h2');
+    const categoryClass = categoryTitle.toLowerCase();
 
     itemsArray.forEach((item) => {
         const menuCard = document.createElement('div');
@@ -25,6 +26,8 @@ function createCategorySection(catergoryTitle, itemsArray) {
         const itemTitle = document.createElement('h3');
         const itemDescription = document.createElement('p');
         const itemPrice = document.createElement('span');
+        
+        menuCard.className = 'menu-card';
 
         // Create and set image 
         itemImg.src = item.src;
@@ -45,12 +48,12 @@ function createCategorySection(catergoryTitle, itemsArray) {
     });
 
     // Add classes to divs
-    menuCategoryDiv.className = 'menu-category'; 
+    menuCategoryDiv.className = `menu-category ${categoryClass}`; 
     itemsGrid.className = 'items-grid'; 
 
-    catergoryHeader.textContent = catergoryTitle;
+    categoryHeader.textContent = categoryTitle;
 
-    menuCategoryDiv.appendChild(catergoryHeader);
+    menuCategoryDiv.appendChild(categoryHeader);
     menuCategoryDiv.appendChild(itemsGrid);
 
     return menuCategoryDiv;

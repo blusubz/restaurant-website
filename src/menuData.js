@@ -11,8 +11,8 @@ import postreImg from './assets/postre-pic-asset.jpg';
 
 const aperitivosData = [
     {
-        name: 'Aperitivos de Queso',
-        description: 'Aperitivos relleno de queso',
+        name: 'Tartaletas de Queso',
+        description: 'Una masa de hojaldre dorada y crujiente rellena con una mezcla tibia y fundida de quesos derretidos. Es rica, sabrosa y tiene el tamaño perfecto para un bocado',
         price: ' $9',
         src: appetizerImg,
         alt: 'Foto de aperitivos de quesitos relleno de queso'
@@ -25,8 +25,8 @@ const aperitivosData = [
         alt: 'Foto de aperitivos de cebolla'
     },
     {
-        name: 'Aperitivos de Queso y Espinaca',
-        description: 'Aperitivos de quesitos relleno de espinaca y queso',
+        name: 'Tartaletas de Espinaca y Crema',
+        description: 'Una mini masa de hojaldre crujiente rellena con una mezcla cremosa de espinaca picada, ajo y queso derretido (frecuentemente ricotta, queso crema o mozzarella)',
         price: ' $9',
         src: aperitivosQuesitosEspinacaImg,
         alt: 'Foto de aperitivo de quesitos relleno de espinaca'
@@ -36,7 +36,7 @@ const aperitivosData = [
 const platosData = [
     {
         name: 'Pasta',
-        description: 'Un plato caliento de pastas con queso y carne y cilantro',
+        description: 'Un plato caliente de pastas con queso y carne y cilantro',
         price: ' $22',
         src: pastaImg,
         alt: 'Foto de un plato de pastas'
@@ -87,7 +87,7 @@ const postreData = [
         description: 'Rico y aterciopelado chocolate mezclado a la perfección, desbordante de un decadente sirope de chocolate, una montaña de crema batida fresca y el toque crujiente de una galleta de chocolate. Espolvoreado con cacao en polvo de primera calidad.',
         price: ' $15',
         src: postreImg,
-        alt: 'Un indulgente batido de chocolate en una taza de frasco masón, cubierto con crema batida, una barra de galleta de chocolate y sirope de chocolate que gotea, frente a un fondo negro con cacao en polvo cayendo.'
+        alt: 'Un indulgente batido de chocolate en una taza de frasco masón, cubierto con crema batida, una barra de galleta de chocolate y sirope de chocolate que gotea, frente a un fondo negro con cacao en polvo cayendo'
     }
 ];
 
