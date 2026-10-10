@@ -162,8 +162,6 @@ h1 {
 }
 
 /* Contact Module Styling */
-
-
 .contact-container {
     border: 2px solid var(--color-border);
     border-radius: 8px;
@@ -187,7 +185,32 @@ h1 {
     color: var(--color-text-muted);
 }
 
-/* input {
+input {
     display: block;
-} */
+}
 
+#submit-btn {
+    display: block;
+    cursor: pointer;
+    border-radius: 3px;
+    background-color: var(--color-accent);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: stretch;
+    gap: 0.5rem;
+}
+
+input, textarea, #submit-btn {
+    width: 100%;
+}
+
+.form-container img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+}
