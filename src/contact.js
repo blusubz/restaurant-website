@@ -14,6 +14,8 @@ export function loadcontact() {
     const chefNumber = document.createElement('p');
     const chefEmail = document.createElement('p');
 
+    contactDiv.className = 'contact-container';
+
     contactCardHeader.textContent = 'La guardiana del fuego';
     chefName.textContent = 'Luz Marinita';
     chefNumber.textContent = '(444)444-4444';
