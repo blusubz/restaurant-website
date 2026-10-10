@@ -12,10 +12,11 @@ export function loadhome() {
     homePageGreeting.textContent = "Welcome to Marinas Restaurant";
     
     sampleImg.src = carneMolidaImg;
+    sampleImg.className = 'home-pic';
     sampleImg.alt = 'picture of carne molida';
     sampleImg.loading= 'lazy';
 
-    sampleParagraph.textContent = "Bienvenidos al restaurante que prepare y sirve la mejor carne molida del Universo.";
+    sampleParagraph.textContent = "Bienvenidos al restaurante que prepara y sirve la mejor carne molida entre todas las estrellas";
     
     // append elements to body (for now)
     parentDiv.appendChild(homePageGreeting);
