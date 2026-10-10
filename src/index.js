@@ -2,6 +2,7 @@ import { loadhome } from './home.js';
 import { loadabout } from './about.js';
 import { loadmenu } from './menu.js';
 import { loadcontact } from './contact.js';
+import './styles.css';
 
 // Logic for selecting tab
 const parentDiv = document.getElementById('content');

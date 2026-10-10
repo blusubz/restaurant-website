@@ -17,7 +17,6 @@ export function loadhome() {
 
     sampleParagraph.textContent = "Bienvenidos al restaurante que prepare y sirve la mejor carne molida del Universo.";
     
-
     // append elements to body (for now)
     parentDiv.appendChild(homePageGreeting);
     parentDiv.appendChild(sampleImg);

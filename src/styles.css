@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+    --font-header: 'Playfair Display', serif;
+    --font-body: 'Lato', sans-serif;
+    --color-bg: #121212; /*(Deep charcoal background)*/
+    --color-card: #1e1e1e; /*(Elevated dark slate surface for cards/forms)*/
+    --color-primary: #f4f1ea; /*(Soft cream white for main headers and title text)*/
+    --color-text-main: #e0dcd3; /*(Warm light gray for readable paragraph/body text)*/
+    --color-text-muted: #a09c94; /*(Taupe gray for secondary descriptions and subtitles)*/
+    --color-accent: #d4af37; /*(Warm muted gold for prices, active nav links, and buttons)*/
+    --color-border: #2c2c2c; /*(Subtle dark gray border to separate cards/containers)*/
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
